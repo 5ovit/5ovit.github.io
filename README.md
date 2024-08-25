@@ -1,0 +1,7 @@
+- 👋 Hi, I’m Sovit
+- 👀 I’m interested in Computers
+- 🌱 I’m currently learning Data Science
+- 💞️ I’m looking to collaborate on some python projects
+- 📫 How to reach me (Don't reach me rn. I'm not prepared yet.)
+- 😄 Pronouns: He/Him
+- ⚡ Fun fact: I like chocolates
