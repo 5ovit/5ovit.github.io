@@ -40,6 +40,7 @@ header {
   background-color: var(--main-bg);
   display: flex;
   justify-content: space-between;
+  align-items: center;
   position: sticky;
   top: 0px;
   left: 0px;
@@ -55,6 +56,28 @@ header > h1 {
   font-size: min(3em, 7vw);
   display: inline-block;
   margin: 0px;
+}
+
+#darkmode_btn {
+  border: none;
+  border-radius: 2em;
+  padding: min(0.8em, 1vw)
+}
+
+#darkmode_btn span:first-child {
+  display: block;
+}
+
+#darkmode_btn span:last-child {
+  display: none;
+}
+
+.darkmode #darkmode_btn span:first-child {
+  display: none;
+}
+
+.darkmode #darkmode_btn span:last-child {
+  display: block;
 }
 
 section.hero {
