@@ -108,7 +108,8 @@ div.hero-left .greetings p {
 }
 
 div.hero-left button {
-  padding: 0.8em;
+  padding: 0.8rem 2rem;
+  border-radius: 2rem;
 }
 
 div.hero-left button a {
