@@ -46,7 +46,7 @@ header {
   left: 0px;
   box-sizing: border-box;
   width: 100vw;
-  margin: 0em 0em 1em 0em;
+  margin: 0px 0px 1px 0px;
   padding: 0.5em 2em;
   border-bottom: 2px solid var(--border-color);
 }
@@ -86,11 +86,18 @@ section.hero {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap-reverse;
-  padding: 5em 0em 10em 0em;
+  padding: 6em 0em 10em 0em;
+}
+
+@media (orientation: portrait) {
+  section.hero {
+    justify-content: flex-start;
+    padding: 0em 0em 4em 0em;
+  }
 }
 
 div.hero-left {
-  padding: 0px 10%;
+  padding: 0px max(4vw, 1em);
   font-family: var(--secondary-font);
   font-size: max(2em, 2.5vw);
   font-weight: bold;
@@ -109,9 +116,17 @@ div.hero-left button a {
   text-decoration: none;
 }
 
-@media (orientation: portrait) {
-  section.hero {
-    justify-content: flex-start;
-    padding: 0em 0em 4em 0em;
-  }
+div.hero-right {
+  box-sizing: border-box;
+  max-width: min(100vw, 36rem);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+div.hero-right img {
+  margin: 1rem;
+  width: 100%;
+  height: auto;
+  border: 1px solid black;
 }
