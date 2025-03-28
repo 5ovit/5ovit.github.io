@@ -8,7 +8,8 @@
   --accent-font: "Jersey 20", sans-serif;
   --main-bg: antiquewhite;
   --hero-bg: darkorchid;
-  --righthero-bg: lightcoral;
+  --hero-left-bg: pink;
+  --hero-right-bg: lightcoral;
   --border-color: black;
 }
 
@@ -16,7 +17,8 @@
   :root {
     --main-bg: black;
     --hero-bg: gray;
-    --righthero-bg: olive;
+    --hero-left-bg: rgb(40, 5, 104);
+    --hero-right-bg: olive;
     --border-color: white;
   }
 }
@@ -54,30 +56,25 @@ header > h1 {
 
 section.hero {
   background: var(--hero-bg);
-  display: grid;
-  grid-template-columns: auto 40%;
-}
-
-section.hero > div.left-side {
   display: flex;
-  flex-direction: column;
   justify-content: center;
+  align-items: center;
+  flex-wrap: wrap-reverse;
 }
 
-section.hero > div.left-side p {
-  font-size: 38pt;
-  margin: 10px;
+div.hero-left {
+  background-color: var(--hero-left-bg);
+  flex-grow: 2;
+  padding: 0.5em;
 }
 
-section.hero > div.left-side button {
-  font-size: 20pt;
+div.hero-right {
+  background-color: var(--hero-right-bg);
+  flex-grow: 1;
 }
 
-section.hero > div.right-side {
-  background: var(--righthero-bg);
-  padding: 0px;
-}
-
-section.hero > div.right-side > img {
-  width: 100%;
+@media (orientation: portrait) {
+  section.hero {
+    justify-content: flex-start;
+  }
 }
