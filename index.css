@@ -1,41 +1,73 @@
+@charset "utf-8";
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Jersey+20&family=Noto+Sans+Display:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+  --primary-font: "Noto Sans Display", Roboto, sans-serif;
+  --secondary-font: "DM Serif Text", serif;
+  --accent-font: "Jersey 20", sans-serif;
+  --main-bg: antiquewhite;
+  --hero-bg: darkorchid;
+  --righthero-bg: lightcoral;
+  --border-color: black;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --main-bg: black;
+    --hero-bg: gray;
+    --righthero-bg: olive;
+    --border-color: white;
+  }
+}
+
 body {
-  background: antiquewhite;
+  font-family: var(--primary-font);
+  background: var(--main-bg);
   margin-top: 100px;
 }
+
 header {
   position: fixed;
   top: 0px;
   left: 0px;
   width: 100%;
   padding: 10px 24px;
-  border-bottom: 2px solid black;
+  border-bottom: 2px solid var(--border-color);
+  background-color: var(--main-bg);
 }
+
 header > h1 {
-  font-family: monospace;
+  font-family: var(--accent-font);
   margin: 0px;
 }
+
 section.hero {
-  background: darkorchid;
+  background: var(--hero-bg);
   display: grid;
   grid-template-columns: auto 40%;
-  padding: 0px 100px;
 }
+
 section.hero > div.left-side {
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
+
 section.hero > div.left-side p {
   font-size: 38pt;
   margin: 10px;
 }
+
 section.hero > div.left-side button {
   font-size: 20pt;
 }
+
 section.hero > div.right-side {
-  background: lightcoral;
+  background: var(--righthero-bg);
   padding: 0px;
 }
+
 section.hero > div.right-side > img {
   width: 100%;
 }
