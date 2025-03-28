@@ -24,22 +24,32 @@
 body {
   font-family: var(--primary-font);
   background: var(--main-bg);
-  margin-top: 100px;
+  margin: 0px;
+  padding: 0px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--secondary-font);
 }
 
 header {
-  position: fixed;
+  background-color: var(--main-bg);
+  position: sticky;
   top: 0px;
   left: 0px;
-  width: 100%;
-  padding: 10px 24px;
+  box-sizing: border-box;
+  width: 100vw;
+  margin: 0em 0em 0.5em 0em;
+  padding: 0.5em;
   border-bottom: 2px solid var(--border-color);
-  background-color: var(--main-bg);
 }
 
 header > h1 {
   font-family: var(--accent-font);
+  font-size: min(3em, 7vw);
+  display: inline-block;
   margin: 0px;
+  padding: 0em 0.5em;
 }
 
 section.hero {
