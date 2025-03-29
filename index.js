@@ -11,9 +11,7 @@ function switch_darkmode(todarkmode = localStorage.getItem("darkmode") !== "acti
 
 function main() {
     let darkmode_btn = document.getElementById("darkmode_btn");
-    darkmode_btn.addEventListener("click", () => {
-        switch_darkmode();
-    });
+    darkmode_btn.addEventListener("click", e => switch_darkmode());
     darkmodestatus = localStorage.getItem("darkmode");
     switch_darkmode(
         darkmodestatus === "active" || (
