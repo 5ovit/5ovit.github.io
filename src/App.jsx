@@ -16,12 +16,6 @@ function switch_darkmode(todarkmode = localStorage.getItem("darkmode") !== "acti
 function header() {
   let darkmode_btn_action = () => {
     switch_darkmode();
-    let darkmodestatus = localStorage.getItem("darkmode");
-    switch_darkmode(
-        darkmodestatus === "active" || (
-            darkmodestatus == undefined && matchMedia("(prefers-color-scheme: dark)").matches
-        )
-    );
   }
   let darkmode_btn = (
     <button id="darkmode_btn" onClick={darkmode_btn_action}>
@@ -69,5 +63,12 @@ function App() {
     </>
   )
 }
+
+let darkmodestatus = localStorage.getItem("darkmode");
+switch_darkmode(
+    darkmodestatus === "active" || (
+        darkmodestatus == undefined && matchMedia("(prefers-color-scheme: dark)").matches
+    )
+);
 
 export default App
